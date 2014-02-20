@@ -1,12 +1,10 @@
-hitarea.js
-==========
+# hitarea.js
 Apply a 'Hit Area' to any element in the DOM.
 
 
-Basic Usage
--------------
+### Basic Usage
     $('.el').hitarea(enter, leave, options);
-    
-    
-Options
-------------
+
+
+### Options
+**radius** (object) - radius of hit area
