@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hitarea.js</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="main-content">
+        <p>some text</p>
+        <p>some text</p>
+        <img class="el" src="http://placehold.it/50x50">
+        <p>some text</p>
+        <p>some text</p>
+    </div><!-- .main-content -->
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/hitarea.js"></script>
+
+    <script>
+        var options = { radius: 50 }
+
+        var enter = function(e) {
+            console.log("this", this); // I want to bind 'this' to the applied element (.el)
+        }
+
+        var leave = function() {}
+
+        $('.el').hitarea(enter, leave, options);
+    </script>
+</body>
+</html>
