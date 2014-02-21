@@ -20,6 +20,8 @@
 
         // apply correct positioning to hitElem
         hitElem.css({
+            'position': 'relative',
+            'z-index': 9999,
             'width': el.outerWidth(),
             'height': el.outerHeight(),
             'padding': settings.radius,
