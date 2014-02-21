@@ -24,6 +24,9 @@
             'margin-left': -(settings.radius)
         });
 
-        hitElem.hover(fn_enter, fn_leave);
+        hitElem.hover(
+            function() { fn_enter(el[0]); },
+            function() { fn_leave(el[0]); }
+        );
     };
 }(jQuery));

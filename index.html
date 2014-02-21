@@ -21,10 +21,14 @@
         var options = { radius: 50 }
 
         var enter = function(e) {
-            console.log("this", this); // I want to bind 'this' to the applied element (.el)
+            // use jquery
+            $(e).css('border', '1px solid red');
         }
 
-        var leave = function() {}
+        var leave = function(e) {
+            // or use vanilla js
+            e.style.border = '1px solid green';
+        }
 
         $('.el').hitarea(enter, leave, options);
     </script>
