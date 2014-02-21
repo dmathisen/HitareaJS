@@ -18,17 +18,20 @@
     <script src="js/hitarea.js"></script>
 
     <script>
-        var options = { radius: 50 }
+        var options = {
+            radius: 50,
+            shape: "circle",
+            repeat: false,
+            endOn: "leave"
+        };
 
         var enter = function(e) {
-            // use jquery
-            $(e).css('border', '1px solid red');
-        }
+            $(e).css('border', '1px solid red'); // use jquery
+        };
 
         var leave = function(e) {
-            // or use vanilla js
-            e.style.border = '1px solid green';
-        }
+            e.style.border = '1px solid green'; // or use vanilla js
+        };
 
         $('.el').hitarea(enter, leave, options);
     </script>

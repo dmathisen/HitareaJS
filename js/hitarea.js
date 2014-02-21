@@ -3,7 +3,11 @@
         var el = $(this);
 
         var settings = $.extend({
-            radius: 20
+            // default settings
+            radius: 20,
+            shape: "square",
+            repeat: true,
+            endOn: "enter"
         }, options);
 
         // wrap element in hit area
@@ -24,9 +28,23 @@
             'margin-left': -(settings.radius)
         });
 
+        if (settings.shape === "circle")
+            hitElem.css('border-radius', '50%');
+
+
         hitElem.hover(
-            function() { fn_enter(el[0]); },
-            function() { fn_leave(el[0]); }
+            function() {
+                fn_enter(el[0]);
+
+                if (settings.repeat === false && settings.endOn === "enter")
+                    hitElem.unbind('mouseenter mouseleave');
+            },
+            function() {
+                fn_leave(el[0]);
+
+                if (settings.repeat === false && settings.endOn === "leave")
+                    hitElem.unbind('mouseenter mouseleave');
+            }
         );
     };
 }(jQuery));
