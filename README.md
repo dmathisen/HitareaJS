@@ -3,6 +3,12 @@ jQuery plugin to apply a 'Hit Area' to any element.
 
 ----
 
+### Installation
+1. Add `jquery.hitarea.js` to your page
+2. That's it.
+
+----
+
 ### Usage
 ##### Basic
 ```javascript
