@@ -2,6 +2,9 @@
     $.fn.hitarea = function(fn_enter, fn_leave, options) {
         var el = $(this); // targetted element
 
+        fn_enter = fn_enter || function() {};
+        fn_leave = fn_leave || function() {};
+
         var settings = $.extend({
             // default settings
             radius: 20,
