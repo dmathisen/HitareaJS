@@ -3,30 +3,34 @@ jQuery plugin to apply a 'Hit Area' to any element.
 
 
 ### Basic Usage
-    var enter = function (e) {
-        e.style.border = '1px solid red';
-    }
-    var leave = function (e) {
-        e.style.border = '1px solid green';
-    }
+```javascript
+var enter = function (e) {
+    e.style.border = '1px solid red';
+}
+var leave = function (e) {
+    e.style.border = '1px solid green';
+}
 
-    $('.el').hitarea(enter, leave);
+$('.el').hitarea(enter, leave);
+```
 
 ### Advanced Usage
-    var options = {
-        radius: 50,
-        shape: "circle",
-        repeat: false,
-        endOn: "leave"
-    };
-    var enter = function (e) {
-        e.style.border = '1px solid red'; // use javascript
-    }
-    var leave = function (e) {
-        $(e).css('border', '1px solid green'); // or use jquery
-    }
+```javascript
+var options = {
+    radius: 50,
+    shape: "circle",
+    repeat: false,
+    endOn: "leave"
+};
+var enter = function (e) {
+    e.style.border = '1px solid red'; // use javascript
+}
+var leave = function (e) {
+    $(e).css('border', '1px solid green'); // or use jquery
+}
 
-    $('.el').hitarea(enter, leave, options);
+$('.el').hitarea(enter, leave, options);
+```
 
 
 ### Options
