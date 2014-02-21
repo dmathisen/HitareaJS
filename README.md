@@ -1,8 +1,10 @@
 # hitarea.js
 jQuery plugin to apply a 'Hit Area' to any element.
 
+----
 
-### Basic Usage
+### Usage
+##### Basic
 ```javascript
 var enter = function (e) {
     e.style.border = '1px solid red';
@@ -14,7 +16,7 @@ var leave = function (e) {
 $('.el').hitarea(enter, leave);
 ```
 
-### Advanced Usage
+##### Advanced
 ```javascript
 var options = {
     radius: 50,
@@ -32,9 +34,13 @@ var leave = function (e) {
 $('.el').hitarea(enter, leave, options);
 ```
 
+----
 
 ### Options
-**radius** (number, default: 20) - radius of hit area
-**shape** (string, default: "square") - shape of the hit area. Options: "square" (default) and "circle"
-**repeat** (boolean, default: true) - set to false to trigger event only once
-**endOn** (string, default: "enter") - if *repeat* is false, when to trigger the last change. Options: "enter" (default) and "leave"
+**radius** *number* (default: 20) - radius of hit area
+
+**shape** *string* (default: "square") - shape of the hit area. Options: "square" and "circle"
+
+**repeat** *boolean* (default: true) - set to false to trigger event only once
+
+**endOn** *string* (default: "enter") - if *repeat* is false, when to trigger the last change. Options: "enter" and "leave"
