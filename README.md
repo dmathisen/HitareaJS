@@ -37,10 +37,10 @@ $('.el').hitarea(enter, leave, options);
 ----
 
 ### Options
-**radius** *number* (default: 20) - radius of hit area
+**radius** *number* (default: 20) - Radius of hit area
 
-**shape** *string* (default: "square") - shape of the hit area. Options: "square" and "circle"
+**shape** *string* (default: "square") - Shape of the hit area. Options: "square" and "circle"
 
-**repeat** *boolean* (default: true) - set to false to trigger event only once
+**repeat** *boolean* (default: true) - Set to false to trigger event only once
 
-**endOn** *string* (default: "enter") - if *repeat* is false, when to trigger the last change. Options: "enter" and "leave"
+**endOn** *string* (default: "enter") - If *repeat* is false, trigger last event on mouse enter or leave. Options: "enter" and "leave"
