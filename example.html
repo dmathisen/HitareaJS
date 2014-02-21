@@ -5,17 +5,23 @@
     <title>hitarea.js</title>
     <style>
         .main-content { padding: 20px; }
-        .el { border: 2px solid blue; }
         .hitarea { border: 1px dashed #ddd; }
+        .el {
+            width: 200px;
+            height: 35px;
+            padding: 10px;
+            font-weight: bold;
+            border: 2px solid blue;
+        }
     </style>
 </head>
 <body>
     <div class="main-content">
-        <p>some text</p>
-        <p>some text</p>
-        <img class="el" src="http://placehold.it/50x50">
-        <p>some text</p>
-        <p>some text</p>
+        <p>stuff</p>
+        <p>more stuff</p>
+        <div class="el">Get close to me.</div>
+        <p>and more stuff</p>
+        <p>... the hit area box doesn't affect the normal document flow. Yay!</p>
     </div><!-- .main-content -->
 
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -28,10 +34,12 @@
 
         var enter = function(e) {
             $(e).css('border', '2px solid red'); // use jquery
+            $(e).text("Hello!");
         };
 
         var leave = function(e) {
             e.style.border = '2px solid green'; // or use vanilla js
+            e.innerHTML = "Come back!";
         };
 
         $('.el').hitarea(enter, leave, options);
