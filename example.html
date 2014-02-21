@@ -5,7 +5,7 @@
     <title>hitarea.js</title>
     <style>
         .main-content { padding: 20px; }
-        .el { border: 1px solid blue; }
+        .el { border: 2px solid blue; }
         .hitarea { border: 1px dashed #ddd; }
     </style>
 </head>
@@ -27,11 +27,11 @@
         };
 
         var enter = function(e) {
-            $(e).css('border', '1px solid red'); // use jquery
+            $(e).css('border', '2px solid red'); // use jquery
         };
 
         var leave = function(e) {
-            e.style.border = '1px solid green'; // or use vanilla js
+            e.style.border = '2px solid green'; // or use vanilla js
         };
 
         $('.el').hitarea(enter, leave, options);

@@ -2,8 +2,15 @@
     $.fn.hitarea = function(fn_enter, fn_leave, options) {
         var el = $(this); // targetted element
 
-        fn_enter = fn_enter || function() {};
-        fn_leave = fn_leave || function() {};
+        // check if fn_enter and fn_leave are proper functions
+        if (typeof fn_enter !== "function") {
+            fn_enter = function() {};
+            console.error("hitarea's first parameter must be a function!");
+        }
+        if (typeof fn_leave !== "function") {
+            fn_leave = function() {};
+            console.error("hitarea's second parameter must be a function!");
+        }
 
         var settings = $.extend({
             // default settings
@@ -24,7 +31,7 @@
         // apply correct positioning to hitElem
         hitElem.css({
             'position': 'relative',
-            'z-index': 9999,
+            'z-index': 99999,
             'width': el.outerWidth(),
             'height': el.outerHeight(),
             'padding': settings.radius,
