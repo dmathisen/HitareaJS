@@ -20,10 +20,10 @@ jQuery plugin to apply a 'Hit Area' to any element.
         endOn: "leave"
     };
     var enter = function (e) {
-        e.style.border = '1px solid red';
+        e.style.border = '1px solid red'; // use javascript
     }
     var leave = function (e) {
-        e.style.border = '1px solid green';
+        $(e).css('border', '1px solid green'); // or use jquery
     }
 
     $('.el').hitarea(enter, leave, options);
