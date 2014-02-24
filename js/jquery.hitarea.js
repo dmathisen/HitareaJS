@@ -15,7 +15,7 @@
         var settings = $.extend({
             // default settings
             radius: 20,
-            shape: "square",
+            rounded: false,
             repeat: true,
             endOn: "enter"
         }, options);
@@ -41,7 +41,7 @@
             'margin-left': -(settings.radius)
         });
 
-        if (settings.shape === "circle")
+        if (settings.rounded)
             hitElem.css('border-radius', '50%');
 
 

@@ -30,7 +30,7 @@ $('.el').hitarea(enter, leave);
 ```javascript
 var options = {
     radius: 50,
-    shape: "circle",
+    rounded: true,
     repeat: false,
     endOn: "leave"
 };
@@ -49,7 +49,7 @@ $('.el').hitarea(enter, leave, options);
 ### Options
 **radius** *number* (default: 20) - Radius of hit area
 
-**shape** *string* (default: "square") - Shape of the hit area. Options: "square" and "circle"
+**rounded** *bool* (default: false) - Set to true to make the hit area shape rounded
 
 **repeat** *boolean* (default: true) - Set to false to trigger event only once
 
