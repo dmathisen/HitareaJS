@@ -2,6 +2,7 @@
 jQuery plugin to apply a 'Hit Area' to any element.
 
 ----
+----
 
 ### Example
 Basic examples up at [danmathisen.com/hitarea-js](http://danmathisen.com/hitarea-js/).
@@ -9,12 +10,14 @@ Basic examples up at [danmathisen.com/hitarea-js](http://danmathisen.com/hitarea
 Or grab the code and check out `example.html`.
 
 ----
+----
 
 ### Installation
 Just add hitarea to your page: `<script src="/path/to/jquery.hitarea.js"></script>`. That's it.
 
 Call `.hitarea()` on any element and you're good to go.
 
+----
 ----
 
 ### Usage
@@ -48,6 +51,7 @@ var leave = function (e) {
 $('.el').hitarea(enter, leave, options);
 ```
 
+----
 ----
 
 ### Options
