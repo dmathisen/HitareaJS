@@ -48,15 +48,19 @@
         hitElem.hover(
             // mouse enter
             function() {
-                fn_enter(el[0]); // trigger enter function passing the element as the only parameter
+                // trigger enter function passing the targetted element as a parameter
+                fn_enter(el[0]);
 
+                // unbind if repeat is false
                 if (settings.repeat === false && settings.endOn === "enter")
                     hitElem.unbind('mouseenter mouseleave');
             },
             // mouse leave
             function() {
-                fn_leave(el[0]); // trigger leave function passing the element as the only parameter
+                // trigger enter function passing the targetted element as a parameter
+                fn_leave(el[0]);
 
+                // unbind if repeat is false
                 if (settings.repeat === false && settings.endOn === "leave")
                     hitElem.unbind('mouseenter mouseleave');
             }
