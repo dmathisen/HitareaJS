@@ -4,7 +4,9 @@ jQuery plugin to apply a 'Hit Area' to any element.
 ----
 
 ### Example
-Grab the code and check out `example.html`. More examples to come.
+Grab the code and check out `example.html`.
+
+More examples up at [danmathisen.com/hitarea-js](http://danmathisen.com/hitarea-js/).
 
 ----
 
